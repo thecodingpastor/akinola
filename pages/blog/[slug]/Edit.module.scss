@@ -1,0 +1,16 @@
+.Container {
+  width: 95%;
+  margin: 1rem auto;
+  border-radius: 2rem;
+  position: relative;
+
+  @media screen and (min-width: 780px) {
+    margin: 2rem auto;
+    width: 80%;
+  }
+
+  @media screen and (min-width: 950px) {
+    margin: 2rem auto;
+    width: 65%;
+  }
+}

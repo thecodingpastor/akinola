@@ -1,0 +1,117 @@
+@import "../../styles/variables.scss";
+
+.InputContainer {
+  padding: 1rem 2rem;
+  font-weight: bold;
+  position: relative;
+
+  textarea {
+    resize: none;
+    width: 100%;
+    min-height: 15rem;
+    border-radius: 2rem;
+    outline: none;
+    border: none;
+    padding: 2rem 0;
+    padding-left: 3rem;
+    font-family: inherit;
+    background-color: $color-white;
+    transition: all 300ms;
+    color: $color-pry;
+    font-size: 2rem;
+
+    &.border {
+      border: 2px solid $color-pry;
+
+      &:focus {
+        border: none;
+        box-shadow: $color-shadow;
+      }
+    }
+
+    &:placeholder-shown + .Label {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(0);
+      font-size: 1rem;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 4px 4px 4px lighten($color-pry, 10%);
+    }
+
+    &::-webkit-input-placeholder {
+      color: darkgray;
+    }
+  }
+
+  .AutoTextArea {
+    display: block;
+    overflow: hidden;
+    resize: none;
+    width: 100%;
+    background-color: white;
+    color: $color-pry;
+  }
+
+  .SpanClear {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid $color-pry-dark;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+
+  .Input {
+    width: 100%;
+    height: 5rem;
+    border-radius: 5rem;
+    border: none;
+    padding-left: 3rem;
+    background-color: $color-white;
+    transition: all 300ms;
+    color: $color-pry;
+    font-size: 2rem;
+
+    &.border {
+      border: 2px solid $color-pry;
+
+      &:focus {
+        border: none;
+        box-shadow: $color-shadow;
+      }
+    }
+
+    &:placeholder-shown + .Label {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(0);
+      font-size: 1rem;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 4px 4px 4px lighten($color-pry, 10%);
+    }
+
+    &::-webkit-input-placeholder {
+      color: darkgray;
+    }
+  }
+
+  .Label {
+    position: absolute;
+    font-weight: 600;
+    padding: 0;
+    top: 2.3rem;
+    left: 5rem;
+    font-size: 1.2rem;
+    transform: translateY(-1.4rem);
+    transition: all 300ms;
+    display: flex;
+    align-items: center;
+    color: darkgray;
+  }
+}

@@ -1,0 +1,8 @@
+@import "../../../../styles/variables.scss";
+
+.Container {
+  margin-top: 2rem;
+  background-color: lighten($background-color, 20%);
+  padding: 2rem;
+  border-radius: 1rem;
+}

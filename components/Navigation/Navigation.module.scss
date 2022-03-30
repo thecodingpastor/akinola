@@ -1,0 +1,92 @@
+@import "../../styles/variables.scss";
+
+.Container {
+  width: 100%;
+  height: 7rem;
+  background-color: darken($background-color-dark, 5%);
+  color: $color-white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  box-shadow: $color-shadow;
+  z-index: 9;
+
+  .Logo {
+    padding: 1rem 2rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .LogoContainer {
+      max-width: 4rem;
+      margin-right: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        border-radius: 50%;
+        width: 4rem;
+
+        @media screen and (max-width: 770px) {
+          margin-right: 0.3rem;
+        }
+      }
+    }
+
+    @media screen and (max-width: 750px) {
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  .Links {
+    display: flex;
+    margin-right: 2rem;
+    align-items: center;
+
+    @media screen and (max-width: 700px) {
+      margin-right: 0;
+    }
+
+    @media screen and (max-width: 600px) {
+      display: none;
+      visibility: hidden;
+    }
+
+    a {
+      padding: 1rem 2rem;
+      margin-left: 1rem;
+      font-weight: bold;
+      border-radius: 1rem;
+      cursor: pointer;
+      transition: all 400ms ease;
+
+      @media screen and (max-width: 660px) {
+        font-size: 80%;
+      }
+
+      svg {
+        font-size: 2rem;
+      }
+
+      @media screen and (max-width: 700px) {
+        margin-right: 0.5rem;
+        padding: 0.5rem 1rem;
+      }
+
+      &:hover,
+      &:active {
+        background-color: $color-pry-dark;
+        color: $color-white;
+      }
+    }
+  }
+
+  .Active {
+    background-color: $color-pry-dark;
+    color: $color-white;
+  }
+}

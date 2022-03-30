@@ -1,0 +1,15 @@
+@import "../../../styles/variables.scss";
+
+.Container {
+  text-align: center;
+
+  svg {
+    font-size: 4rem;
+    border-radius: 50%;
+    margin: 0 1rem;
+    cursor: pointer;
+    border: 0.2rem solid $color-pry-dark;
+    color: hite;
+    padding: 0.5rem;
+  }
+}

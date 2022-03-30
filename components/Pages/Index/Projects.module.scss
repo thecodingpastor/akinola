@@ -1,0 +1,92 @@
+@import "../../../styles/variables.scss";
+
+.Container {
+  padding: 2rem;
+  background: $color-pry-dark;
+  background-size: cover;
+  background-position: center;
+
+  h3 {
+    font-size: 4rem;
+    color: white;
+    margin-left: 3rem;
+  }
+
+  .ProjectList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
+    gap: 2rem;
+
+    @media screen and (max-width: 779px) {
+      grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
+      max-width: 70rem;
+      margin: 3rem auto;
+    }
+
+    @media screen and (max-width: 550px) {
+      max-width: 35rem;
+      margin: 3rem auto;
+    }
+
+    .Project {
+      @media screen and (max-width: 617px) {
+        max-width: 35rem;
+        margin: 3rem auto;
+      }
+
+      @media screen and (max-width: 400px) {
+        max-width: 27rem;
+        margin: 2rem auto;
+      }
+
+      .CardStyles {
+        height: 100%; // This makes all cards same height irrespective of content
+        display: flex;
+        flex-direction: column;
+      }
+
+      .Description {
+        margin-bottom: auto;
+      }
+    }
+  }
+
+  .Github {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      border-radius: 1rem;
+      display: inline-block;
+      padding: 1rem 2rem;
+      margin-top: 1rem;
+      background: $color-pry-dark;
+      color: white;
+    }
+
+    span {
+      cursor: pointer;
+      border: 1px solid $color-pry;
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+      transition: all ease 300ms;
+
+      &:hover {
+        color: white;
+        background-color: $color-pry-dark;
+      }
+    }
+  }
+
+  .Collab {
+    background-color: $color-pry-dark;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    font-size: 1.2rem;
+    display: inline-block;
+    width: fit-content;
+    align-self: flex-end;
+  }
+}

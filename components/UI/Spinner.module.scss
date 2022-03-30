@@ -1,0 +1,105 @@
+@import "../../styles/variables.scss";
+
+.Main {
+  display: flex;
+  flex-direction: column;
+  color: $color-pry;
+  align-items: center;
+  margin-top: 3rem;
+
+  h4 {
+    letter-spacing: 0.3rem;
+    margin-top: 2rem;
+  }
+}
+.Container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  .Circle {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: linear-gradient(
+      45deg,
+      $color-pry 0%,
+      $color-pry-dark 35%,
+      $color-pry 100%
+    );
+    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.3);
+    transform: translateX(0);
+    z-index: 2;
+    &:nth-child(1) {
+      animation: move-1 2s infinite;
+    }
+    &:nth-child(3) {
+      animation: move-3 2s infinite;
+    }
+  }
+}
+@keyframes move-1 {
+  0% {
+    z-index: 3;
+    transform: translateX(0);
+  }
+  25% {
+    z-index: 3;
+    transform: translateX(26rem);
+    @media screen and (max-width: 500px) {
+      transform: translateX(10rem);
+    }
+  }
+  50% {
+    z-index: 3;
+    transform: translateX(0);
+  }
+
+  50.1% {
+    z-index: 1;
+    transform: translateX(0);
+  }
+  75% {
+    z-index: 1;
+    transform: translateX(26rem);
+    @media screen and (max-width: 500px) {
+      transform: translateX(10rem);
+    }
+  }
+  100% {
+    z-index: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes move-3 {
+  0% {
+    z-index: 1;
+    transform: translateX(0);
+  }
+  25% {
+    z-index: 1;
+    transform: translateX(-26rem);
+    @media screen and (max-width: 500px) {
+      transform: translateX(10rem);
+    }
+  }
+  50% {
+    z-index: 1;
+    transform: translateX(0);
+  }
+
+  50.1% {
+    z-index: 3;
+    transform: translateX(0);
+  }
+  75% {
+    z-index: 3;
+    transform: translateX(-26rem);
+    @media screen and (max-width: 500px) {
+      transform: translateX(10rem);
+    }
+  }
+  100% {
+    z-index: 3;
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,96 @@
+@import "../../styles/variables.scss";
+
+.Container {
+  z-index: 100;
+  position: fixed;
+  left: 10%;
+  top: 10%;
+  max-width: 800px;
+  width: 80%;
+  max-height: calc(100vh - 20%);
+  background: whitesmoke;
+  box-shadow: 0 2px 8px $color-pry;
+  border-radius: 0.8rem;
+  padding: 2rem;
+  overflow-y: auto;
+  transition: all 500ms ease;
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+    &-track {
+      background-color: lighten($color-pry, 20%);
+      border-radius: 1rem;
+    }
+
+    &-thumb {
+      background-color: darken($color-pry, 10%);
+      border-radius: 1rem;
+      border: 0.3rem solid lighten($color-pry, 20%);
+    }
+
+    &:hover {
+      background-color: darken($color-pry, 20%);
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    width: 60%;
+    left: 20%;
+  }
+
+  @media screen and (min-width: 1000px) {
+    width: 50%;
+    left: 25%;
+  }
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  // background: white;
+  color: $color-pry;
+
+  h4 {
+    text-transform: capitalize;
+    border-bottom: 0.5rem double darkgray;
+  }
+
+  svg {
+    color: $color-pry;
+    font-size: 3rem;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+}
+
+.CloseButton {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+.Content {
+  padding: 1rem 0.5rem;
+}
+
+.Footer {
+  padding: 1rem 0.5rem;
+  position: relative;
+  text-align: center;
+}
+
+.SlideDown {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.SlideUp {
+  transform: translateY(-100vh);
+  opacity: 0;
+}

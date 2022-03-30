@@ -1,0 +1,33 @@
+@import "../../styles/variables.scss";
+
+.footer {
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-pry-dark;
+  color: white;
+
+  svg {
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+    background-color: white;
+    color: $color-pry-dark;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+
+    .FooterImage {
+      margin: 0 1rem;
+      background-color: white;
+      border-radius: 50% !important;
+    }
+  }
+}

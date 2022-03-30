@@ -1,0 +1,154 @@
+@import "../../../styles/variables.scss";
+
+.Container {
+  min-height: 80vh;
+  background-color: $background-color-light;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -0.1rem; //to remove the tiny strange color-light line at the boundary of the curves
+
+  h3 {
+    font-size: 4rem;
+    margin-right: 2rem;
+    margin-bottom: -2rem;
+    color: $color-pry-dark;
+    border-bottom: 0.8rem ridge $color-pry;
+    display: inline-block;
+    line-height: 1.3;
+    align-self: flex-end;
+
+    @media screen and (max-width: 600px) {
+      font-size: 3rem;
+    }
+  }
+
+  .About {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+
+    .MichaelContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2rem 0;
+
+      img {
+        border: 3px solid white !important;
+        border-radius: 50%;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+    }
+
+    .AboutText {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: center;
+      text-align: justify;
+      padding: 2rem;
+      line-height: 1.5;
+
+      @media screen and (max-width: 900px) {
+        padding: 1rem 0.5rem;
+        line-height: 1.5;
+      }
+    }
+
+    .ResumeBtn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background-color: $color-pry-dark;
+      border-radius: 1rem;
+      border: 2px solid white;
+      color: white;
+      cursor: pointer;
+      transition: all ease 300ms;
+      margin-top: 2rem;
+
+      &:hover,
+      &:active {
+        transform: scale(1.05);
+        background-color: darken($color-pry, 5%);
+      }
+    }
+  }
+
+  div {
+    flex: 1;
+    img {
+      width: 40rem;
+      border-radius: 50%;
+      border: 0.2rem solid white;
+
+      @media screen and (max-width: 900px) {
+        width: 35rem;
+        margin-top: 2rem;
+      }
+
+      @media screen and (max-width: 600px) {
+        width: 25rem;
+      }
+    }
+  }
+
+  article {
+    flex: 1;
+  }
+
+  .Skills {
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 4rem;
+    background-color: $color-pry-dark;
+    margin-bottom: 2rem;
+
+    h4 {
+      font-size: 2.5rem;
+      color: white;
+      padding: 0.5rem 1rem;
+    }
+
+    .SkillList {
+      span {
+        font-weight: bold;
+        color: $color-pry-dark;
+      }
+    }
+    div {
+      display: flex;
+      background-color: white;
+      padding: 0.5rem 1rem;
+
+      @media screen and (max-width: 590px) {
+        flex-direction: column;
+      }
+
+      span {
+        display: inline-block;
+        color: $color-pry;
+        margin: 0.5rem;
+        border-radius: 2rem;
+        padding: 1rem;
+        border: 2px solid $color-pry-dark;
+      }
+    }
+  }
+
+  .Wave svg {
+    position: relative;
+    display: block;
+    width: calc(101% + 1.3px);
+    height: 118px;
+    transform: rotateY(180deg);
+  }
+
+  .Wave .ShapeFill {
+    fill: $background-color-light;
+    fill: $color-pry-dark;
+  }
+}

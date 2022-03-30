@@ -1,0 +1,31 @@
+@import "../../styles/variables.scss";
+
+.Container {
+  position: fixed;
+  top: 20rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: $color-pry;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  z-index: 1;
+
+  svg {
+    font-size: 3rem;
+    cursor: pointer;
+
+    &.Active {
+      border: 1px solid $color-pry-dark;
+      color: $color-pry-dark;
+      border-radius: 50%;
+      padding: 0.5rem;
+    }
+
+    &:hover {
+      color: $color-pry-dark;
+    }
+  }
+}

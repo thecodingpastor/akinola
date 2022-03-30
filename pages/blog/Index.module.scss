@@ -1,0 +1,16 @@
+.Container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+  gap: 2rem;
+  margin: 2rem;
+
+  @media screen and (max-width: 779px) {
+    max-width: 50rem;
+    margin: 3rem auto;
+  }
+
+  @media screen and (max-width: 550px) {
+    max-width: 35rem;
+    margin: 3rem auto;
+  }
+}

@@ -1,0 +1,31 @@
+@import "../../styles/variables.scss";
+
+.Container {
+  min-width: 35rem;
+  top: 8rem;
+  right: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  background: $background-color-light;
+  border: .2rem solid $color-pry;
+  z-index: 50;
+  position: fixed;
+
+  &.Error {
+    background: $color-danger;
+    color: white;
+    border: .2rem solid whitesmoke;
+  }
+
+  .Inner {
+    position: relative;
+
+    svg {
+      position: absolute;
+      right: -.2rem;
+      top: -.2rem;
+      font-size: 2.5rem;
+      cursor: pointer;
+    }
+  }
+}

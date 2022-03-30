@@ -1,0 +1,27 @@
+@import "../../../../styles/variables.scss";
+
+.Container {
+  border: 1px solid $color-pry-dark;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 2rem 0;
+  position: relative;
+
+  h2 {
+    color: $background-color-dark;
+    text-align: left;
+  }
+
+  span {
+    font-size: 80%;
+    font-style: italic;
+  }
+
+  svg {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+}

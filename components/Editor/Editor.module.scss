@@ -1,0 +1,15 @@
+@import "../../styles/variables.scss";
+
+.MarkdownPreviewContainer {
+  margin-top: 3rem;
+  padding: 3rem;
+  border: 2px solid $color-pry-dark;
+  border-radius: 2rem;
+}
+
+.PreviewHeader {
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  border-bottom: 2px solid $color-pry-dark;
+}

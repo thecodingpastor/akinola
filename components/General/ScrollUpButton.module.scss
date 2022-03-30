@@ -1,0 +1,27 @@
+@import "../../styles/variables.scss";
+
+.Container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  bottom: 6rem;
+  right: 2rem;
+  font-size: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background: $color-pry-dark;
+  width: 4.5rem;
+  height: 4.5rem;
+  border: 0.3rem solid white;
+  opacity: 0.8;
+  transition: all ease 300ms;
+  z-index: 10;
+
+  &:hover,
+  &:active {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}

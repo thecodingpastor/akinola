@@ -1,0 +1,10 @@
+@import "../../styles/variables.scss";
+
+.Container {
+  box-shadow: 4px 4px 4px rgba(225, 225, 225, 0.4);
+  width: 100%;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: justify;
+}
