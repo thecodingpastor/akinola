@@ -2,10 +2,7 @@ import classes from "./About.module.scss";
 
 const About = () => {
   console.log(process.env.APP_URL);
-  console.log(process.env.APP_UR2);
-  console.log(process.env.TOKEN_EXPIRES);
-  console.log(process.env.ADMIN_EMAIL);
-  console.log(process.env);
+  console.log(process.env.APP_URL2);
   return (
     <div className={classes.Container} id="about">
       <h3>Meet Michael Akinola</h3>
