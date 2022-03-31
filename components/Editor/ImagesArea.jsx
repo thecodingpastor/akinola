@@ -41,10 +41,6 @@ const ImagesArea = ({ UploadedFiles, setUploadedFiles, postSlug }) => {
     uploadFile(PreviewSource);
   };
 
-  const ClearPickedImage = () => {
-    setPreviewSource("");
-  };
-
   const uploadFile = (img) => {
     SendRequest(
       `${process.env.APP_URL}/posts/upload-file`,
@@ -139,7 +135,7 @@ const ImagesArea = ({ UploadedFiles, setUploadedFiles, postSlug }) => {
             </div>
           </div>
           {PreviewSource && (
-            <div style={{ position: "relative" }}>
+            <div style={{ position: "relative", cursor: "default" }}>
               {PreviewSource.startsWith("data:application/pdf") ? (
                 <Button
                   text="A PDF File detected"
@@ -148,10 +144,7 @@ const ImagesArea = ({ UploadedFiles, setUploadedFiles, postSlug }) => {
               ) : (
                 <img src={PreviewSource} alt="Picked Image" />
               )}
-              <AiFillCloseCircle
-                className={classes.CloseBtn}
-                onClick={ClearPickedImage}
-              />
+              <span>Not Upload Yet</span>
             </div>
           )}
           <div>
