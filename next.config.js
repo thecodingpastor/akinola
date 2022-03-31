@@ -17,10 +17,6 @@ module.exports = (phase) => {
   }
 
   return {
-    env: {
-      APP_URL: "https://stormy-wildwood-15445.herokuapp.com/api/v1",
-      TOKEN_EXPIRES: "2592000000",
-    },
     images: {
       domains: ["res.cloudinary.com"],
     },
