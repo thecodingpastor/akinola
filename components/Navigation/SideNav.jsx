@@ -1,12 +1,14 @@
 import { useContext } from "react";
 
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import NavData from "./NavData";
 import classes from "./SideNav.module.scss";
 import AuthContext from "../../context/Auth/AuthContext";
 
 const SideNav = () => {
+  const router = useRouter();
   const { IsLoggedIn } = useContext(AuthContext);
   const closeNav = () => {
     const checkbox = document.getElementById("navi_toggle");
@@ -38,17 +40,18 @@ const SideNav = () => {
 
       <nav className={classes.navigation__nav}>
         <ul className={classes.navigation__list}>
-          {NavData.map((nav) => (
-            <li
-              className={classes.navigation__item}
-              key={nav.id}
-              onClick={handleClick}
-            >
-              <a href={nav.url} className={classes.navigation__link}>
-                {nav.text}
-              </a>
-            </li>
-          ))}
+          {router.pathname === "/" &&
+            NavData.map((nav) => (
+              <li
+                className={classes.navigation__item}
+                key={nav.id}
+                onClick={handleClick}
+              >
+                <a href={nav.url} className={classes.navigation__link}>
+                  {nav.text}
+                </a>
+              </li>
+            ))}
           <li className={classes.navigation__item} onClick={closeNav}>
             <Link href="/blog">
               <a className={classes.navigation__link}>Blog</a>
