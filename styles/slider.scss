@@ -3,6 +3,10 @@
 .slider_section {
   height: calc(100vh - 7rem);
   position: relative;
+
+  @media screen and (max-width: 520px) {
+    height: calc(80vh - 7rem);
+  }
 }
 
 .slider_section__center {
@@ -66,7 +70,6 @@
     right: 2rem;
     padding: 2rem;
     max-width: 50%;
-    // max-height: 60%;
     border-radius: 3rem;
     background: white;
     z-index: 6;
@@ -82,13 +85,11 @@
 
     @media screen and (max-width: 570px) {
       font-size: 90%;
-      bottom: 0.5rem;
       max-width: 90%;
     }
 
     &.slide_in_from_left {
       animation-name: slide_in_from_left_keyframe;
-      // animation-name: fade_in;
       animation-duration: 1500ms;
       opacity: 0.9;
     }

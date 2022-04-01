@@ -1,6 +1,5 @@
 import { useEffect, useContext } from "react";
 
-import classes from "./Home.module.scss";
 import Slider from "./Slider/Slider";
 import PostContext from "../../../context/Post/PostContext";
 
@@ -11,11 +10,7 @@ const HomePage = () => {
   }, [SliderData.length]);
 
   if (SliderData.length < 3) return "";
-  return (
-    <div className={classes.Container}>
-      <Slider SliderData={SliderData} />
-    </div>
-  );
+  return <Slider SliderData={SliderData} />;
 };
 
 export default HomePage;

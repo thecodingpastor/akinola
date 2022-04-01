@@ -21,7 +21,7 @@ const AllPosts = () => {
     }
   }, [IsLoggedIn, Posts.length]);
 
-  if (Posts.length === 0)
+  if (Posts.length === 0 && !PostContext)
     return (
       <div style={{ textAlign: "center", marginTop: "2rem", fontSize: "3rem" }}>
         There is no post yet.
