@@ -33,7 +33,6 @@ const PostContext = createContext(INITIAL_STATE);
 
 export const PostContextProvider = ({ children }) => {
   const MY_URL = process.env.APP_URL;
-  console.log(MY_URL);
 
   const { Token, User } = useContext(AuthContext);
   const { SetAlert } = useContext(GlobalContext);
