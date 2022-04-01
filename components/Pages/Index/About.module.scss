@@ -5,7 +5,7 @@
   background-color: $background-color-light;
   display: flex;
   flex-direction: column;
-  margin-bottom: -0.1rem; //to remove the tiny strange color-light line at the boundary of the curves
+  margin-bottom: 3rem;
 
   h3 {
     font-size: 4rem;
@@ -107,6 +107,10 @@
     background-color: $color-pry-dark;
     margin-bottom: 2rem;
 
+    @media screen and (max-width: 860px) {
+      margin: 0 2rem;
+    }
+
     h4 {
       font-size: 2.5rem;
       color: white;
@@ -114,9 +118,24 @@
     }
 
     .SkillList {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+      @media screen and (max-width: 505px) {
+        flex-wrap: nowrap;
+        flex-direction: column;
+      }
+
+      
       span {
         font-weight: bold;
         color: $color-pry-dark;
+
+        @media screen and (max-width: 505px) {
+          width: 100%;
+        }
       }
     }
     div {
@@ -124,9 +143,9 @@
       background-color: white;
       padding: 0.5rem 1rem;
 
-      @media screen and (max-width: 590px) {
-        flex-direction: column;
-      }
+      // @media screen and (max-width: 590px) {
+      //   flex-direction: column;
+      // }
 
       span {
         display: inline-block;

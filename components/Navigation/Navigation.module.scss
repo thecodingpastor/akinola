@@ -79,14 +79,14 @@
 
       &:hover,
       &:active {
-        background-color: $background-color;
-        color: $color-white;
+        background-color: darken(white, 5%);
+        color: $color-pry-dark;
       }
     }
   }
 
   .Active {
-    background-color: $color-pry-dark;
-    color: $color-white;
+    background-color: darken(white, 5%);
+    color: $color-pry-dark;
   }
 }

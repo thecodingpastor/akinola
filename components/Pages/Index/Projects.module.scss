@@ -2,20 +2,18 @@
 
 .Container {
   padding: 2rem;
-  background: $color-pry-dark;
-  background-size: cover;
-  background-position: center;
 
   h3 {
     font-size: 4rem;
-    color: white;
-    margin-left: 3rem;
+    border-bottom: 4px solid $color-pry-dark;
+    display: inline-block;
   }
 
   .ProjectList {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
     gap: 2rem;
+    margin-top: 2rem;
 
     @media screen and (max-width: 779px) {
       grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
@@ -25,21 +23,24 @@
 
     @media screen and (max-width: 550px) {
       max-width: 35rem;
-      margin: 3rem auto;
+      margin: 1rem auto;
     }
 
     .Project {
+      
       @media screen and (max-width: 617px) {
         max-width: 35rem;
-        margin: 3rem auto;
+        margin:0 auto;
       }
 
       @media screen and (max-width: 400px) {
         max-width: 27rem;
-        margin: 2rem auto;
+        margin: 0 auto;
       }
 
       .CardStyles {
+        border: 2px solid $color-pry-dark;
+        border-radius: 2rem;
         height: 100%; // This makes all cards same height irrespective of content
         display: flex;
         flex-direction: column;
