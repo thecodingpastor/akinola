@@ -100,7 +100,7 @@ export const AuthContextProvider = ({ children }) => {
   };
 
   const ForgotPassword = (email) => {
-    if (process.env.ADMIN_EMAIL !== email) {
+    if (!process.env.ADMIN_EMAIL.includes(email)) {
       return SetAlert({
         type: "success",
         message:
