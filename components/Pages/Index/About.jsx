@@ -1,8 +1,6 @@
 import classes from "./About.module.scss";
 
 const About = () => {
-  console.log(process.env.TEST);
-  console.log(process.env);
   return (
     <div className={classes.Container} id="about">
       <h3>Meet Michael Akinola</h3>

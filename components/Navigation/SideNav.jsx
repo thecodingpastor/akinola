@@ -40,6 +40,11 @@ const SideNav = () => {
 
       <nav className={classes.navigation__nav}>
         <ul className={classes.navigation__list}>
+          <li className={classes.navigation__item} onClick={closeNav}>
+            <Link href="/">
+              <a className={classes.navigation__link}>Home</a>
+            </Link>
+          </li>
           {router.pathname === "/" &&
             NavData.map((nav) => (
               <li
@@ -52,6 +57,7 @@ const SideNav = () => {
                 </a>
               </li>
             ))}
+
           <li className={classes.navigation__item} onClick={closeNav}>
             <Link href="/blog">
               <a className={classes.navigation__link}>Blog</a>
