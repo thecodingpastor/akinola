@@ -323,21 +323,8 @@ const TextEditor = ({ postToEdit = null, editPage = null }) => {
 
         <div className="flex-center" style={{ marginTop: "2rem" }}>
           {!Loading ? (
-            <Button
-              text={
-                editPage
-                  ? "Edit Post"
-                    ? !EditIsBlocked
-                      ? "Edit post to see submit button"
-                      : "Edit Post"
-                    : "Edit Post"
-                  : "Save Post"
-              }
-              disabled={editPage && !EditIsBlocked}
-              handleClick={onSubmit}
-            />
+            <Button text="Save Post" handleClick={onSubmit} />
           ) : (
-            // <Button text={!editPage ? "Save" : "Edit"} handleClick={onSubmit} />
             <Spin />
           )}
         </div>

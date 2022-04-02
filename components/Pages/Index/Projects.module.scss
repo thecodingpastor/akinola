@@ -12,6 +12,7 @@
     font-size: 4rem;
     border-bottom: 4px solid $color-pry-dark;
     display: inline-block;
+    margin-top: -5rem;
   }
 
   .ProjectList {
@@ -73,7 +74,7 @@
 
     span {
       cursor: pointer;
-      border: 1px solid $color-pry;
+      border: 2px solid $color-pry-dark;
       padding: 0.5rem 1rem;
       border-radius: 1rem;
       transition: all ease 300ms;

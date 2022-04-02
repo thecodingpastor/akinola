@@ -23,17 +23,15 @@ function Footer() {
         <AiOutlineLogout onClick={Logout} />
       )}
       <div>
-        <div className={classes.FooterImage}>
-          {/* <Image
-            src="/images/logo.png"
-            alt="Michael Akinola"
-            width="30"
-            height="30"
-            className="round"
-          /> */}
-        </div>
-        {/* <img src="/images/logo.png" alt="Michael Akinola" /> */}
-        Michael Akinola Copyright &copy; {new Date().getFullYear()}
+        <div className={classes.FooterImage}></div>
+        <Image
+          src="/images/logo.png"
+          alt="Michael Akinola"
+          width={30}
+          height="30"
+          className="round"
+        />
+        &nbsp; Michael Akinola &copy; {new Date().getFullYear()}
       </div>
       <Login />
     </footer>

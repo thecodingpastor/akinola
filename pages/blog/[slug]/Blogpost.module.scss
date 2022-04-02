@@ -36,17 +36,26 @@
       margin-right: 0.5rem;
     }
 
-    span {
+    .count {
       border-radius: 50%;
       width: 2rem;
       height: 2rem;
       font-size: 1.2rem;
       color: $color-pry;
       background: white;
-      border: 2px solid $color-pry;
+      border: 2px solid $color-pry-dark;
       display: flex;
       align-items: center;
       justify-content: center;
     }
+  }
+
+  .Title {
+    line-height: 1.2;
+    margin-bottom: 2rem;
+  }
+
+  .Description {
+    margin-bottom: 2rem;
   }
 }

@@ -56,7 +56,6 @@
 
       @media screen and (max-width: 900px) {
         padding: 1rem 0.5rem;
-        line-height: 1.5;
       }
     }
 
@@ -112,8 +111,8 @@
       margin: 0 2rem;
     }
 
-    h4 {
-      font-size: 2.5rem;
+    h5 {
+      // font-size: 2rem;
       color: white;
       padding: 0.5rem 1rem;
     }
@@ -123,6 +122,7 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
+      line-height: 0.5;
 
       @media screen and (max-width: 505px) {
         flex-wrap: nowrap;
@@ -131,8 +131,8 @@
 
       
       span {
-        font-weight: bold;
         color: $color-pry-dark;
+        font-size: 70%;
 
         @media screen and (max-width: 505px) {
           width: 100%;
@@ -144,15 +144,11 @@
       background-color: white;
       padding: 0.5rem 1rem;
 
-      // @media screen and (max-width: 590px) {
-      //   flex-direction: column;
-      // }
-
       span {
         display: inline-block;
         color: $color-pry;
         margin: 0.5rem;
-        border-radius: 2rem;
+        border-radius: 1.2rem;
         padding: 1rem;
         border: 2px solid $color-pry-dark;
       }

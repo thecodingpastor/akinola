@@ -69,8 +69,8 @@ const Post = (props) => {
           isPublished={Post.isPublished}
           isSlider={Post.isSlider}
         />
-        <h1>{Post.title}</h1>
-        <h3>{Post.description}</h3>
+        <h1 className={classes.Title}>{Post.title}</h1>
+        <h3 className={classes.Description}>{Post.description}</h3>
         <ReactMarkdown
           children={Post.content}
           components={{

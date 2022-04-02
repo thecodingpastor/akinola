@@ -58,7 +58,7 @@ export const AuthContextProvider = ({ children }) => {
             message: err.message,
           });
           router.replace("/");
-          // localStorage.removeItem("token");
+          localStorage.removeItem("token");
         });
     } else {
       localStorage.removeItem("token");

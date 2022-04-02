@@ -41,7 +41,7 @@ const About = () => {
         </section>
       </section>
       <section className={classes.Skills}>
-        <h4>Skills Summary</h4>
+        <h5>Skills Summary</h5>
         <div className={classes.SkillList}>
           <span>R</span>
           <span>Python</span>

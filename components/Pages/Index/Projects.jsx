@@ -2,6 +2,8 @@ import Link from "next/link";
 import { useContext, useEffect } from "react";
 import ProjectContext from "../../../context/Project/ProjectContext";
 
+import checkCharacterLength from "../../../utils/checkCharacterLength";
+
 import Card from "../../General/Card";
 import classes from "./Projects.module.scss";
 
@@ -13,16 +15,6 @@ const Projects = () => {
       GetAllProjects();
     }
   }, [Projects.length]);
-
-  const checkCharacterLength = (text, element) => {
-    if (element === "title") {
-      if (text.length > 50) return text.substring(0, 50) + "...";
-      else return text;
-    } else {
-      if (text.length > 120) return text.substring(0, 116) + "...";
-      else return text;
-    }
-  };
 
   if (Projects?.length > 0)
     return (

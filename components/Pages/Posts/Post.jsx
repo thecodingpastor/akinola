@@ -4,6 +4,7 @@ import { FaThumbsUp, FaRegThumbsUp } from "react-icons/fa";
 import RandomImage from "../../../utils/pickRandomImage";
 
 import classes from "./Post.module.scss";
+import checkCharacterLength from "../../../utils/checkCharacterLength";
 
 const Post = ({
   title,
@@ -38,7 +39,9 @@ const Post = ({
           />
         </div>
         <div className={classes.Heading}>
-          <h1>{title}</h1>
+          <h3 style={{ lineHeight: "1.2", marginBottom: "1rem" }}>
+            {checkCharacterLength(title, "title")}
+          </h3>
           <div>
             <span>{createdAt} </span>
             <span className={classes.Read}>{estimatedReadTime} mins read</span>
