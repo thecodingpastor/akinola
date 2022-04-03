@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 import ReactMarkdown from "react-markdown";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
-import atomDark from "react-syntax-highlighter/dist/cjs/styles/prism/atom-dark";
+import NightOwl from "react-syntax-highlighter/dist/cjs/styles/prism/night-owl";
 import py from "react-syntax-highlighter/dist/cjs/languages/prism/python";
 import js from "react-syntax-highlighter/dist/cjs/languages/prism/javascript";
 import r from "react-syntax-highlighter/dist/cjs/languages/prism/r";
@@ -182,14 +182,6 @@ const TextEditor = ({ postToEdit = null, editPage = null }) => {
   );
   let UploadedFilesRef = useRef(postToEdit?.assets && postToEdit?.assets);
 
-  let editIsBlocked =
-    editPage &&
-    (BlogPost.title?.trim() !== titleRef.current ||
-      BlogPost.description?.trim() !== descriptionRef.current ||
-      BlogPost.content?.trim() !== contentRef.current ||
-      BlogPost.estimatedReadTime?.trim() !== estimatedReadTimeRef.current ||
-      !ArrayCompare(UploadedFiles, UploadedFilesRef.current));
-
   const [EditIsBlocked, setEditIsBlocked] = useState(
     editPage &&
       (BlogPost.title?.trim() !== titleRef.current ||
@@ -342,7 +334,7 @@ const TextEditor = ({ postToEdit = null, editPage = null }) => {
                 return !inline && match ? (
                   <SyntaxHighlighter
                     children={String(children).replace(/\n$/, "")}
-                    style={atomDark}
+                    style={NightOwl}
                     language={match[1]}
                     PreTag="div"
                     {...props}

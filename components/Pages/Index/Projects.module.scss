@@ -1,18 +1,18 @@
 @import "../../../styles/variables.scss";
 
 .Container {
-  padding: 2rem;
+  padding: 0 2rem;
 
   @media screen and (min-width: 600px) {
-    margin-bottom: 5rem;
-    margin-top: 5rem;
+    margin-bottom: 2rem;
   }
 
   h3 {
     font-size: 4rem;
+    line-height: 1.3;
     border-bottom: 4px solid $color-pry-dark;
     display: inline-block;
-    margin-top: -5rem;
+    margin-left: 3rem;
   }
 
   .ProjectList {

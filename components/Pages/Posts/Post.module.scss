@@ -2,7 +2,7 @@
 
 .Container {
   background: white;
-  color: darken($color-pry, 5%);
+  color: $color-pry-dark;
   border-radius: 2rem;
   box-shadow: 4px 4px 4px $color-pry;
   cursor: pointer;

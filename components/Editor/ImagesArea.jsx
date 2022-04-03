@@ -14,6 +14,7 @@ import Spin from "../UI/Spin";
 
 import classes from "./ImagesArea.module.scss";
 import GlobalContext from "../../context/General/GlobalContext";
+import Image from "next/image";
 
 const ImagesArea = ({ UploadedFiles, setUploadedFiles, postSlug }) => {
   const { Token } = useContext(AuthContext);
@@ -117,6 +118,7 @@ const ImagesArea = ({ UploadedFiles, setUploadedFiles, postSlug }) => {
             name="fileToUpload"
             onChange={handleOnChange}
             ref={pickRef}
+            accept="image/*"
             style={{ display: "none" }}
           />
           <div
@@ -131,19 +133,18 @@ const ImagesArea = ({ UploadedFiles, setUploadedFiles, postSlug }) => {
                 alignItems: "center",
               }}
             >
-              Select an image or pdf &nbsp; <BsFillFileEarmarkArrowUpFill />
+              Select an image &nbsp; <BsFillFileEarmarkArrowUpFill />
             </div>
           </div>
           {PreviewSource && (
             <div style={{ position: "relative", cursor: "default" }}>
-              {PreviewSource.startsWith("data:application/pdf") ? (
-                <Button
-                  text="A PDF File detected"
-                  style={{ padding: "0.5rem", width: "20rem" }}
-                />
-              ) : (
-                <img src={PreviewSource} alt="Picked Image" />
-              )}
+              <Image
+                src={PreviewSource}
+                alt="Picked Image"
+                width={60}
+                height={60}
+              />
+
               <span>Not Upload Yet</span>
             </div>
           )}
@@ -167,18 +168,8 @@ const ImagesArea = ({ UploadedFiles, setUploadedFiles, postSlug }) => {
               <div key={file.fileId} className={classes.File}>
                 <CopyUrlButton url={file.url} />
                 <span style={{ display: "inline-block", position: "relative" }}>
-                  {file.url.includes(".pdf") ? (
-                    <a
-                      href={file.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className={classes.ResumeBtn}
-                    >
-                      A PDF File is Here
-                    </a>
-                  ) : (
-                    <img src={file.url} />
-                  )}
+                  <Image src={file.url} width="100" height="100" />
+
                   {!Loading ? (
                     <AiFillCloseCircle
                       className={classes.CloseBtn}

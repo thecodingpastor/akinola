@@ -48,7 +48,9 @@ const Post = ({
           </div>
         </div>
 
-        <div className={classes.Description}>{description}</div>
+        <div className={classes.Description}>
+          {checkCharacterLength(description)}
+        </div>
         <footer>
           <div className={classes.LikeCountContainer}>
             {!likes?.includes(localStorage.getItem("akinId")) ? (
