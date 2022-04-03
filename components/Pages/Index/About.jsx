@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import classes from "./About.module.scss";
 
 const About = () => {
@@ -6,7 +8,14 @@ const About = () => {
       <h3>Meet Michael Akinola</h3>
       <section className={classes.About}>
         <div className={classes.MichaelContainer}>
-          <img src="/images/akin.png" alt="Michael Akinola" />
+          <Image
+            src="/images/akin.png"
+            alt="Michael Akinola"
+            width={400}
+            height="400"
+            blurDataURL="/images/question.jpg"
+            placeholder="blur"
+          />
         </div>
         <section className={classes.AboutText}>
           <article>

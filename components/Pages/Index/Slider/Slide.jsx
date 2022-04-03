@@ -14,22 +14,20 @@ const Slide = ({ slideData, position }) => {
   }, [position]);
   return (
     <article className={`slider_article ${position}`}>
-      {/* <div style={{ width: "100%" }}>
-        <Image
-          src={slideData.coverImage}
-          className="slider_image"
-          width="100%"
-          height="100%"
-          blurDataURL="/images/question.jpg"
-          placeholder="blur"
-          layout="intrinsic"
-        />
-      </div> */}
-      <img
+      <Image
+        src={slideData.coverImage}
+        alt={slideData.title}
+        className="slider_image"
+        width="1500"
+        height="800"
+        blurDataURL="/images/question.jpg"
+        placeholder="blur"
+      />
+      {/* <img
         src={slideData.coverImage}
         className="slider_image"
         alt={slideData.title}
-      />
+      /> */}
       <div className="slider_overlay"></div>
       <Link href={`/blog/${slideData.slug}`}>
         <div

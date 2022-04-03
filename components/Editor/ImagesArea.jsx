@@ -143,6 +143,8 @@ const ImagesArea = ({ UploadedFiles, setUploadedFiles, postSlug }) => {
                 alt="Picked Image"
                 width={60}
                 height={60}
+                blurDataURL="/images/question.jpg"
+                placeholder="blur"
               />
 
               <span>Not Upload Yet</span>
@@ -168,7 +170,13 @@ const ImagesArea = ({ UploadedFiles, setUploadedFiles, postSlug }) => {
               <div key={file.fileId} className={classes.File}>
                 <CopyUrlButton url={file.url} />
                 <span style={{ display: "inline-block", position: "relative" }}>
-                  <Image src={file.url} width="100" height="100" />
+                  <Image
+                    src={file.url}
+                    width="100"
+                    height="100"
+                    blurDataURL="/images/question.jpg"
+                    placeholder="blur"
+                  />
 
                   {!Loading ? (
                     <AiFillCloseCircle

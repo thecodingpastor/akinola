@@ -119,6 +119,8 @@ const Contact = () => {
             width="400"
             height="400"
             alt="contact-image"
+            blurDataURL="/images/question.jpg"
+            placeholder="blur"
           />
         </div>
       </div>
