@@ -104,7 +104,7 @@ const TextEditor = ({ postToEdit = null, editPage = null }) => {
 
     let coverImage;
     if (UploadedFiles.length > 0) {
-      coverImage = UploadedFiles[0];
+      coverImage = UploadedFiles[0].url;
     } else {
       coverImage = "";
     }
@@ -131,6 +131,7 @@ const TextEditor = ({ postToEdit = null, editPage = null }) => {
       }
     )
       .then((data) => {
+        console.log(data);
         setBlogPost({
           title: "",
           estimatedReadTime: "",
@@ -155,6 +156,7 @@ const TextEditor = ({ postToEdit = null, editPage = null }) => {
         }
       })
       .catch((err) => {
+        console.log(err);
         SetAlert({
           type: "error",
           message: err.message,

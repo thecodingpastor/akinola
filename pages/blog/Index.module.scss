@@ -1,6 +1,6 @@
 .Container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(23rem, 1fr));
   justify-content: center;
   // grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
   gap: 2rem;
@@ -15,5 +15,13 @@
     max-width: 35rem;
     margin: 1rem auto;
     margin-top: 2rem;
+  }
+
+  @media screen and (max-width: 390px) {
+    max-width: 28rem;
+  }
+
+  @media screen and (max-width: 340px) {
+    max-width: 24rem;
   }
 }
