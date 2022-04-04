@@ -117,29 +117,59 @@ const PostReducers = (state, action) => {
           : [],
       };
     case TOGGLE_PUBLISH_POST_TYPE:
-      let publishedPost = state.Posts.find(
-        (post) => post._id === action.payload.postId
-      );
-      return {
-        ...state,
-        Post: {
-          ...publishedPost,
+      if (state.Posts.length > 0) {
+        let postToFind = state.Posts.find(
+          (post) => post._id === action.payload.postId
+        );
+        let publishedPost = {
+          ...postToFind,
           isSlider: action.payload.isSlider,
           isPublished: action.payload.isPublished,
-        },
-      };
+        };
+        return {
+          ...state,
+          Posts: state.Posts.map((post) =>
+            post._id === action.payload.postId ? publishedPost : post
+          ),
+          Post: publishedPost,
+        };
+      } else {
+        return {
+          ...state,
+          Post: {
+            ...state.Post,
+            isSlider: action.payload.isSlider,
+            isPublished: action.payload.isPublished,
+          },
+        };
+      }
     case TOGGLE_SLIDER_TYPE:
-      let sliderPost = state.Posts.find(
-        (post) => post._id === action.payload.postId
-      );
-      return {
-        ...state,
-        Post: {
-          ...sliderPost,
+      if (state.Posts.length > 0) {
+        let postToFind = state.Posts.find(
+          (post) => post._id === action.payload.postId
+        );
+        let sliderPost = {
+          ...postToFind,
           isSlider: action.payload.isSlider,
           isPublished: action.payload.isPublished,
-        },
-      };
+        };
+        return {
+          ...state,
+          Posts: state.Posts.map((post) =>
+            post._id === action.payload.postId ? sliderPost : post
+          ),
+          Post: sliderPost,
+        };
+      } else {
+        return {
+          ...state,
+          Post: {
+            ...state.Post,
+            isSlider: action.payload.isSlider,
+            isPublished: action.payload.isPublished,
+          },
+        };
+      }
     case TOGGLE_LIKE_TYPE:
       return {
         ...state,

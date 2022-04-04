@@ -239,7 +239,6 @@ export const PostContextProvider = ({ children }) => {
       }
     )
       .then((data) => {
-        console.log(data);
         PostDispatch({
           type: DELETE_COMMENT_TYPE,
           payload: { postSlug, comments: data.comments },
