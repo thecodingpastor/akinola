@@ -1,4 +1,4 @@
-import { useEffect, useContext, useRef } from "react";
+import { useEffect, useContext, useRef, useState } from "react";
 
 import Head from "next/head";
 
@@ -9,11 +9,15 @@ import classes from "./Index.module.scss";
 import PostContext from "../../context/Post/PostContext.js";
 import Spinner from "../../components/UI/Spinner";
 import AuthContext from "../../context/Auth/AuthContext";
+import Placeholders from "../../utils/pickRandomImage";
 
 const AllPosts = () => {
   const { GetAllBlogposts, Posts, PostIsLoading } = useContext(PostContext);
   const { IsLoggedIn } = useContext(AuthContext);
   const authRef = useRef(IsLoggedIn);
+  const [RandomImage, _] = useState(
+    Placeholders[Math.floor(Math.random() * Placeholders.length)]
+  );
 
   useEffect(() => {
     if (Posts.length < 1 || authRef.current !== IsLoggedIn) {
@@ -45,7 +49,7 @@ const AllPosts = () => {
                 slug={post.slug}
                 title={post.title}
                 description={post.description}
-                coverImage={post.coverImage}
+                coverImage={post.coverImage ? post.coverImage : RandomImage}
                 createdAt={formatDate(post.createdAt)}
                 estimatedReadTime={post.estimatedReadTime}
                 comments={post.comments}

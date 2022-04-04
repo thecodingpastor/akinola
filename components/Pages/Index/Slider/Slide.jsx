@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Placeholders from "../../../../utils/pickRandomImage";
 
 const Slide = ({ slideData, position }) => {
   const [Slide, setSlide] = useState(false);
+  // const [RandomImage, _] = useState(
+  //   Placeholders[Math.floor(Math.random() * Placeholders.length)]
+  // );
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -14,17 +18,29 @@ const Slide = ({ slideData, position }) => {
   }, [position]);
   return (
     <article className={`slider_article ${position}`}>
-      <Image
-        src={slideData.coverImage}
-        alt={slideData.title}
-        className="slider_image"
-        width="1500"
-        height="800"
-        blurDataURL="/images/question.jpg"
-        placeholder="blur"
-      />
+      <div
+        style={{
+          position: "relative",
+          display: "block",
+          width: "100%",
+          height: "100%",
+        }}
+      >
+        <Image
+          src={slideData.coverImage}
+          alt={slideData.title}
+          className="slider_image"
+          blurDataURL="/images/question.jpg"
+          placeholder="blur"
+          layout="fill"
+        />
+      </div>
       {/* <img
-        src={slideData.coverImage}
+        src={
+          slideData.coverImage
+            ? slideData.coverImage
+            : Placeholders[Math.floor(Math.random() * Placeholders.length)]
+        }
         className="slider_image"
         alt={slideData.title}
       /> */}

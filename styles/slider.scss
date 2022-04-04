@@ -66,6 +66,13 @@
   transition: all linear 300ms;
   opacity: 0.5;
 
+  img {
+    // height: 100% !important;
+    // width: 100% !important;
+    object-fit: cover !important;
+    background-origin: center;
+  }
+
   .slider_article__section {
     position: absolute;
     bottom: 2rem;

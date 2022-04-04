@@ -1,3 +1,4 @@
+import Placeholders from "../../utils/pickRandomImage";
 import {
   CLEAR_SINGLE_POST_TYPE,
   CREATE_COMMENT_TYPE,
@@ -35,14 +36,30 @@ const PostReducers = (state, action) => {
         ...state,
         PostIsLoading: false,
         PostError: null,
-        Posts: action.payload,
+        Posts: action.payload.map((post) =>
+          !post.coverImage
+            ? {
+                ...post,
+                coverImage:
+                  Placeholders[Math.floor(Math.random() * Placeholders.length)],
+              }
+            : post
+        ),
       };
     case GET_SLIDER_DATA_TYPE:
       return {
         ...state,
         PostIsLoading: false,
         PostError: false,
-        SliderData: action.payload,
+        SliderData: action.payload.map((post) =>
+          !post.coverImage
+            ? {
+                ...post,
+                coverImage:
+                  Placeholders[Math.floor(Math.random() * Placeholders.length)],
+              }
+            : post
+        ),
       };
     case CREATE_POST_TYPE:
       return {

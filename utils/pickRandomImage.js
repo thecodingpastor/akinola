@@ -1,11 +1,10 @@
-const items = [
-  "https://res.cloudinary.com/indelible-success/image/upload/v1648844763/samples/landscapes/landscape-panorama.jpg",
-  "https://res.cloudinary.com/indelible-success/image/upload/v1648844752/samples/landscapes/girl-urban-view.jpg",
-  "https://res.cloudinary.com/indelible-success/image/upload/v1648844753/samples/bike.jpg",
-  "https://res.cloudinary.com/indelible-success/image/upload/v1648844761/samples/landscapes/nature-mountains.jpg",
-  "https://res.cloudinary.com/indelible-success/image/upload/v1648844757/samples/landscapes/beach-boat.jpg",
+const Placeholders = [
+  "https://res.cloudinary.com/indelible-success/image/upload/v1649063942/placeholders/machine3_bkhlwn.jpg",
+  "https://res.cloudinary.com/indelible-success/image/upload/v1649063942/placeholders/machine1_hgxewq.jpg",
+  "https://res.cloudinary.com/indelible-success/image/upload/v1649063942/placeholders/data1_p7p98i.jpg",
+  "https://res.cloudinary.com/indelible-success/image/upload/v1649063942/placeholders/machine2_nsxcd0.jpg",
+  "https://res.cloudinary.com/indelible-success/image/upload/v1649063942/placeholders/data3_o94gbm.jpg",
+  "https://res.cloudinary.com/indelible-success/image/upload/v1649063942/placeholders/data2_nnpwrg.jpg",
 ];
 
-const RandomImage = items[Math.floor(Math.random() * items.length)];
-
-export default RandomImage;
+export default Placeholders;

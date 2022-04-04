@@ -104,12 +104,9 @@ const TextEditor = ({ postToEdit = null, editPage = null }) => {
 
     let coverImage;
     if (UploadedFiles.length > 0) {
-      let imageToUseAsCover = UploadedFiles.find(
-        (f) => !f.url.includes(".pdf")
-      );
-      coverImage = imageToUseAsCover ? imageToUseAsCover.url : "";
+      coverImage = UploadedFiles[0];
     } else {
-      coverImage = RandomImage;
+      coverImage = "";
     }
 
     const method = !editPage ? "POST" : "PATCH";

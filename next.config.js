@@ -4,7 +4,7 @@ module.exports = (phase) => {
   if (phase === PHASE_DEVELOPMENT_SERVER) {
     return {
       env: {
-        APP_URL: "http://localhost:4000/api/v1",
+        APP_URL: "http://localhost:5000/api/v1",
         TOKEN_EXPIRES: "2592000000",
         EMAIL_SERVICE_ID: "service_uqd1x8q",
         EMAIL_TEMPLATE_ID: "template_0rxzfgg",
