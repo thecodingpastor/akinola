@@ -5,13 +5,6 @@ const SocialMedia = () => {
   return (
     <div className={classes.Container}>
       <a
-        href="https://twitter.com/MykelAkinola"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <AiFillTwitterCircle title="Twitter" />
-      </a>
-      <a
         href="https://github.com/teamindelible"
         target="_blank"
         rel="noreferrer"
@@ -24,6 +17,13 @@ const SocialMedia = () => {
         rel="noreferrer"
       >
         <BsLinkedin title="Linked In" />
+      </a>
+      <a
+        href="https://twitter.com/MykelAkinola"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <AiFillTwitterCircle title="Twitter" />
       </a>
     </div>
   );
