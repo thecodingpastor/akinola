@@ -67,8 +67,14 @@
   opacity: 0.5;
 
   img {
-    object-fit: cover !important;
+    display: block;
+    object-fit: contain;
     background-origin: center;
+    margin-top: 10rem;
+
+    @media screen and (max-width: 750px) {
+      object-fit: cover;
+    }
   }
 
   .slider_article__section {
@@ -130,13 +136,13 @@
     transform: translateX(100%);
   }
 
-  .slider_image {
-    position: absolute;
-    object-fit: contain;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-  }
+  // .slider_image {
+  //   position: absolute;
+  //   object-fit: contain;
+  //   z-index: 2;
+  //   width: 100%;
+  //   height: 100%;
+  // }
 }
 
 .fade_in {

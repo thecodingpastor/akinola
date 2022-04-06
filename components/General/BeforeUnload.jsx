@@ -8,7 +8,7 @@ const BeforeUnload = ({ children, blockRoute, message, unloadFunc, id }) => {
       if (blockRoute) {
         const promptAnswer = confirm(
           message ||
-            "Are you sure you want to leave this page? You will lose your work!"
+            "Are you sure you want to leave this page? If you have uploaded an image, delete it to rid your database of unused files. You will also lose your work!"
         );
 
         if (!promptAnswer) {

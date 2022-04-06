@@ -19,6 +19,7 @@ const Slide = ({ slideData, position }) => {
   return (
     <article className={`slider_article ${position}`}>
       <div
+        className="slider_image_container"
         style={{
           position: "relative",
           display: "block",
@@ -29,10 +30,13 @@ const Slide = ({ slideData, position }) => {
         <Image
           src={slideData.coverImage}
           alt={slideData.title}
-          className="slider_image"
+          // className="slider_image"
           blurDataURL="/images/question.jpg"
           placeholder="blur"
+          // width="100%"
+          // height="100%"
           layout="fill"
+          // layout="responsive"
         />
       </div>
       {/* <img

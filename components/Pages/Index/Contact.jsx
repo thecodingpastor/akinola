@@ -116,8 +116,8 @@ const Contact = () => {
         <div className={classes.ContactImage}>
           <Image
             src="/images/customer-service.png"
-            width="400"
-            height="400"
+            width="380"
+            height="380"
             alt="contact-image"
             blurDataURL="/images/question.jpg"
             placeholder="blur"

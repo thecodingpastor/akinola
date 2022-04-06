@@ -189,7 +189,6 @@ const TextEditor = ({ postToEdit = null, editPage = null }) => {
   );
 
   const createPageUnload = () => {
-    // await Promise.all([someCall(), anotherCall()])
     if (UploadedFiles.length > 0) {
       UploadedFiles.forEach((file, index) => {
         // Dont need url since its just deleting from only cloudinary

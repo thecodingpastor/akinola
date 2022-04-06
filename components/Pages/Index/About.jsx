@@ -9,7 +9,7 @@ const About = () => {
       <section className={classes.About}>
         <div className={classes.MichaelContainer}>
           <Image
-            src="/images/akin.png"
+            src="/images/akin.jpg"
             alt="Michael Akinola"
             width={400}
             height="400"
@@ -19,25 +19,23 @@ const About = () => {
         </div>
         <section className={classes.AboutText}>
           <article>
-            Michael Akinola is an industry experienced data scientist, deploying
+            Michael is an industry experienced data scientist, deploying
             advanced data analytics techniques and machine learning algorithms
-            to build predictive models for real world applications in an
-            automotive industry in the United States. His mantra is value
-            creation, and he has consistently added value through tutoring,
-            coaching, guiding and empowering individuals (younger ones and his
-            contemporaries) to aspire to greatness. He is passionate about
-            learning, research, innovation, and leadership. He holds a
-            bachelor’s degree in Physics from Obafemi Awolowo University,
-            Nigeria, master’s degrees in Physics from University of Lagos,
-            Nigeria and Computer Science and Quantitative Methods from Austin
-            Peay State University, Tennessee, United States. Michael is
-            committed to life-long learning and sharing knowledge with others. I
-            enjoy leading diverse teams and drawing on the diverse strengths of
+            to build predictive models for real world applications. His mantra
+            is value creation, and he has consistently added value through
+            tutoring, coaching, guiding and empowering individuals (younger ones
+            and his contemporaries) to aspire to greatness. He is passionate
+            about learning, research, innovation, and leadership. He holds
+            bachelor’s and master’s degrees in Physics and a master's degree in
+            Computer Science and Quantitative Methods. Michael is committed to
+            life-long learning and sharing knowledge with others. He enjoys
+            leading diverse teams and drawing on the diverse strengths of
             everyone on the team. A proud husband and father, who enjoys playing
-            scrabble, chess, piano, and soccer. Various life experiences have
-            taught me the importance of honesty, discipline, hard work, and
-            perseverance. My goal is to inspire the sleeping giant within every
-            individual I meet.
+            scrabble, chess, piano, and soccer at his leisure. Various life
+            experiences have taught him the importance of honesty, discipline,
+            hard work, and perseverance. His goals are to contribute
+            significantly to AI development and to inspire the sleeping giant
+            within every individual he meets.
           </article>
           <a
             href="resume.pdf"
