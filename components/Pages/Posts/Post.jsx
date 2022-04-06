@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FaThumbsUp, FaRegThumbsUp } from "react-icons/fa";
-import RandomImage from "../../../utils/pickRandomImage";
 
 import classes from "./Post.module.scss";
 import checkCharacterLength from "../../../utils/checkCharacterLength";
@@ -29,7 +28,7 @@ const Post = ({
         <div style={{ width: "100%" }}>
           <Image
             className="image-container"
-            src={coverImage ? coverImage : RandomImage}
+            src={coverImage || "/images/placeholder.png"}
             width="170"
             height="130"
             blurDataURL="/images/question.jpg"

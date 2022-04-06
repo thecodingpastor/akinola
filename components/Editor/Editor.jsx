@@ -15,7 +15,6 @@ import AuthContext from "../../context/Auth/AuthContext";
 import PostContext from "../../context/Post/PostContext";
 
 import useHttpClient from "../../utils/hooks/useHttpClient";
-import RandomImage from "../../utils/pickRandomImage";
 
 import Input from "../Form/Input";
 import Button from "../Form/Button";
