@@ -11,6 +11,7 @@ import js from "react-syntax-highlighter/dist/cjs/languages/prism/javascript";
 import r from "react-syntax-highlighter/dist/cjs/languages/prism/r";
 
 import BlogButtons from "../../../components/General/BlogButtons";
+import LinkRenderer from "../../../components/General/LinkRenderer";
 import classes from "./Blogpost.module.scss";
 
 import PostContext from "../../../context/Post/PostContext";
@@ -90,6 +91,7 @@ const Post = (props) => {
                 </code>
               );
             },
+            a: LinkRenderer,
           }}
         />
 

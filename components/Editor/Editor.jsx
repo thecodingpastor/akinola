@@ -24,6 +24,7 @@ import Spin from "../UI/Spin";
 import classes from "./Editor.module.scss";
 import ArrayCompare from "../../utils/arraysCompare";
 import { CREATE_POST_TYPE, EDIT_POST_TYPE } from "../../context/Post/PostTypes";
+import LinkRenderer from "../General/LinkRenderer";
 
 SyntaxHighlighter.registerLanguage("js", js);
 SyntaxHighlighter.registerLanguage("r", r);
@@ -340,6 +341,7 @@ const TextEditor = ({ postToEdit = null, editPage = null }) => {
                   </code>
                 );
               },
+              a: LinkRenderer,
             }}
           />
         </div>
