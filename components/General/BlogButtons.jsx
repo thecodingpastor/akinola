@@ -73,7 +73,7 @@ const BlogButtons = ({ _id, isPublished, isSlider, isProject }) => {
                   className={activeSlider}
                   onClick={() =>
                     handleShowConfirm(
-                      `Do you really want to make ${
+                      `Do you really want to ${
                         isSlider
                           ? "REMOVE THIS from the sliders"
                           : "MAKE THIS a slider"
