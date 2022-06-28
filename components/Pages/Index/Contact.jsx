@@ -68,7 +68,7 @@ const Contact = () => {
       <div className={classes.Contact}>
         <form onSubmit={onSubmit} className={classes.ContactForm}>
           <h4 className="text-center">
-            I will get back to you between 2 - 48 hours
+            I will get back to you between 2 - 12 hours
           </h4>
 
           <Input

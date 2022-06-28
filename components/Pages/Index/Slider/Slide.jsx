@@ -31,15 +31,6 @@ const Slide = ({ slideData, position }) => {
           layout="fill"
         />
       </div>
-      {/* <img
-        src={
-          slideData.coverImage
-            ? slideData.coverImage
-            : Placeholders[Math.floor(Math.random() * Placeholders.length)]
-        }
-        className="slider_image"
-        alt={slideData.title}
-      /> */}
       <div className="slider_overlay"></div>
       <Link href={`/blog/${slideData.slug}`}>
         <div

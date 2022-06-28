@@ -19,23 +19,22 @@ const About = () => {
         </div>
         <section className={classes.AboutText}>
           <article>
-            Michael is an industry experienced data scientist, deploying
-            advanced data analytics techniques and machine learning algorithms
-            to build predictive models for real world applications. His mantra
-            is value creation, and he has consistently added value through
-            tutoring, coaching, guiding and empowering individuals (younger ones
-            and his contemporaries) to aspire to greatness. He is passionate
-            about learning, research, innovation, and leadership. He holds
-            bachelor’s and master’s degrees in Physics and a master's degree in
-            Computer Science and Quantitative Methods. Michael is committed to
-            life-long learning and sharing knowledge with others. He enjoys
-            leading diverse teams and drawing on the diverse strengths of
-            everyone on the team. A proud husband and father, who enjoys playing
-            scrabble, chess, piano, and soccer at his leisure. Various life
-            experiences have taught him the importance of honesty, discipline,
-            hard work, and perseverance. His goals are to contribute
-            significantly to AI development and to inspire the sleeping giant
-            within every individual he meets.
+            I am a data scientist, currently deploying advanced data analytics
+            techniques and machine learning algorithms to build predictive
+            models for real world applications. My mantra is value creation, and
+            I have consistently added value through problem solving, tutoring,
+            coaching, guiding and empowering individuals to aspire to greatness.
+            I am passionate about learning, research, innovation, personal
+            development and leadership. I hold bachelor’s and master’s degrees
+            in Physics and a master's degree in Computer Science & Quantitative
+            Methods. I am committed to life-long learning and sharing knowledge
+            with others. I enjoy leading diverse teams and drawing on the
+            diverse strengths of everyone on the team. A proud husband and
+            father, who enjoy playing scrabble, chess, piano, and soccer at my
+            leisure. Various life experiences have taught me the importance of
+            honesty, discipline, hard work, and perseverance. My goals are to
+            contribute significantly to Artificial Intelligence development and
+            to inspire the sleeping giant within every individual I meet.
           </article>
           <a
             href="resume.pdf"
