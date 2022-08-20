@@ -31,3 +31,15 @@
     }
   }
 }
+
+.Count {
+  text-align: center;
+  color: $color-pry-dark;
+  font-style: italic;
+  margin-bottom: 2rem;
+
+  span {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}

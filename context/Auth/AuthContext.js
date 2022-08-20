@@ -117,41 +117,50 @@ export const AuthContextProvider = ({ children }) => {
         {
           "Content-Type": "application/json",
         }
-      ).then((data) => {
-        if (!data.mail) {
-          SetAlert({
-            type: "success",
-            message: data.message,
-            title: "Check your email.",
-            duration: 10000,
-          });
-        } else {
-          const serviceID = process.env.EMAIL_SERVICE_ID;
-          const templateID = "template_7felm67";
-          const userID = process.env.EMAIL_USER_ID;
+      )
+        .then((data) => {
+          if (!data.mail) {
+            SetAlert({
+              type: "success",
+              message: data.message,
+              title: "Check your email.",
+              duration: 10000,
+            });
+          } else {
+            const serviceID = process.env.EMAIL_SERVICE_ID;
+            const templateID = "template_7felm67";
+            const userID = process.env.EMAIL_USER_ID;
 
-          emailjs
-            .send(serviceID, templateID, { message: data.mail }, userID)
-            .then(
-              () => {
-                SetAlert({
-                  type: "success",
-                  message: data.message,
-                  title: "Check your email.",
-                  duration: 10000,
-                });
-              },
-              (error) => {
-                SetAlert({
-                  type: "error",
-                  duration: 12000,
-                  title: "Something went wrong.",
-                  message: error.text,
-                });
-              }
-            );
-        }
-      });
+            emailjs
+              .send(serviceID, templateID, { message: data.mail }, userID)
+              .then(
+                (res) => {
+                  SetAlert({
+                    type: "success",
+                    message: data.message,
+                    title: "Check your email.",
+                    duration: 10000,
+                  });
+                },
+                (error) => {
+                  SetAlert({
+                    type: "error",
+                    duration: 12000,
+                    title: "Something went wrong.",
+                    message: error.text,
+                  });
+                }
+              );
+          }
+        })
+        .catch((err) => {
+          SetAlert({
+            type: "error",
+            message: err.message,
+            title: "Failed.",
+            duration: 6000,
+          });
+        });
     }
   };
 
