@@ -123,7 +123,7 @@ export const AuthContextProvider = ({ children }) => {
 
           emailjs
             .send(
-              serviceID,
+              "service_suf2mtl", // serviceID
               "template_7felm67", //templateID
               { message: data.mail },
               userID
