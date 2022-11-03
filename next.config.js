@@ -6,7 +6,7 @@ module.exports = (phase) => {
       env: {
         APP_URL: "http://localhost:5000/api/v1",
         TOKEN_EXPIRES: "2592000000",
-        EMAIL_SERVICE_ID: "service_a0mbihc",
+        EMAIL_SERVICE_ID: "service_ivgh97m",
         EMAIL_TEMPLATE_ID: "template_0rxzfgg",
         EMAIL_USER_ID: "s1kHASytRypomu8RH",
       },
@@ -23,7 +23,7 @@ module.exports = (phase) => {
     env: {
       APP_URL: "https://stormy-wildwood-15445.herokuapp.com/api/v1",
       TOKEN_EXPIRES: "2592000000",
-      EMAIL_SERVICE_ID: "service_a0mbihc",
+      EMAIL_SERVICE_ID: "service_ivgh97m",
       EMAIL_TEMPLATE_ID: "template_0rxzfgg",
       EMAIL_USER_ID: "s1kHASytRypomu8RH",
     },
