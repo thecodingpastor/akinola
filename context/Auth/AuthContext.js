@@ -138,6 +138,7 @@ export const AuthContextProvider = ({ children }) => {
                 });
               },
               (error) => {
+                console.log(error);
                 SetAlert({
                   type: "error",
                   duration: 12000,
@@ -156,80 +157,7 @@ export const AuthContextProvider = ({ children }) => {
           duration: 6000,
         });
       });
-    // }
   };
-
-  // const ForgotPassword = (email) => {
-  //   if (!process.env.ADMIN_EMAIL.includes(email)) {
-  //     return SetAlert({
-  //       type: "success",
-  //       message:
-  //         "If valid, a message would have been sent to the provided email address for further instructions.",
-  //       title: "Check your email.",
-  //     });
-  //   } else {
-  //     AuthDispatch({ type: START_TYPE });
-
-  //     SendRequest(
-  //       `${MY_URL}/users/forgot-password`,
-  //       "POST",
-  //       JSON.stringify({ email }),
-  //       {
-  //         "Content-Type": "application/json",
-  //       }
-  //     )
-  //       .then((data) => {
-  //         if (!data.mail) {
-  //           console.log("data => ", data);
-  //           SetAlert({
-  //             type: "success",
-  //             message: data.message,
-  //             title: "Check your email.",
-  //             duration: 10000,
-  //           });
-  //         } else {
-  //           // The service ID is invalid. To find this ID, visit https://dashboard.emailjs.com/admin
-  //           const serviceID = process.env.EMAIL_SERVICE_ID; //service_ivgh97m
-  //           const userID = process.env.EMAIL_USER_ID;
-
-  //           return console.log(data);
-  //           emailjs
-  //             .send(
-  //               serviceID,
-  //               "template_7felm67", //templateID
-  //               { message: data.mail },
-  //               userID
-  //             )
-  //             .then(
-  //               () => {
-  //                 SetAlert({
-  //                   type: "success",
-  //                   message: data.message,
-  //                   title: "Check your email.",
-  //                   duration: 10000,
-  //                 });
-  //               },
-  //               (error) => {
-  //                 SetAlert({
-  //                   type: "error",
-  //                   duration: 12000,
-  //                   title: "Something went wrong.",
-  //                   message: error.text,
-  //                 });
-  //               }
-  //             );
-  //         }
-  //       })
-  //       .catch((err) => {
-  //         SetAlert({
-  //           type: "error",
-  //           message: err.message,
-  //           title: "Failed.",
-  //           duration: 6000,
-  //         });
-  //       });
-  //   }
-  // };
 
   const Logout = () => {
     localStorage.removeItem("token");
