@@ -39,11 +39,7 @@ function Footer() {
         </p>
       )}
       <div className={classes.footer}>
-        {!IsLoggedIn ? (
-          <GrSecure onClick={ToggleModal} />
-        ) : (
-          <AiOutlineLogout onClick={Logout} />
-        )}
+        {IsLoggedIn && <AiOutlineLogout onClick={Logout} />}
         <div>
           <div className={classes.FooterImage}></div>
           <Image
@@ -52,6 +48,7 @@ function Footer() {
             width={30}
             height="30"
             className="round"
+            onDoubleClick={!IsLoggedIn ? ToggleModal : () => {}}
           />
           &nbsp; Michael Akinola &copy; {new Date().getFullYear()}
         </div>
