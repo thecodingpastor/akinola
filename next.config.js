@@ -6,7 +6,7 @@ module.exports = (phase) => {
       env: {
         APP_URL: "http://localhost:5000/api/v1",
         TOKEN_EXPIRES: "2592000000",
-        EMAIL_SERVICE_ID: "service_ivgh97m",
+        EMAIL_SERVICE_ID: "service_a0mbihc",
         EMAIL_TEMPLATE_ID: "template_0rxzfgg",
         EMAIL_USER_ID: "s1kHASytRypomu8RH",
         ADMIN_EMAIL: [
