@@ -119,14 +119,15 @@ export const AuthContextProvider = ({ children }) => {
           });
         } else {
           const serviceID = process.env.EMAIL_SERVICE_ID;
-          const userID = process.env.EMAIL_USER_ID;
+          const publicID = process.env.EMAIL_USER_ID;
+          return console.log(data);
 
           emailjs
             .send(
               "service_suf2mtl", // serviceID
               "template_7felm67", //templateID
               { message: data.mail },
-              userID
+              "s1kHASytRypomu8RH" //publicID
             )
             .then(
               () => {
