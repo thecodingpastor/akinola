@@ -118,10 +118,6 @@ export const AuthContextProvider = ({ children }) => {
             duration: 10000,
           });
         } else {
-          const serviceID = process.env.EMAIL_SERVICE_ID;
-          const publicID = process.env.EMAIL_USER_ID;
-          return console.log(data);
-
           emailjs
             .send(
               "service_suf2mtl", // serviceID
